@@ -1,0 +1,127 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 255, 170, 0.3);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #00ffaa, #0077ff, #ff00ff);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 10s ease infinite;
+  text-align: center;
+}
+
+@keyframes gradientFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: radial-gradient(circle, #0f0f0f, #1a1a1a);
+  animation: fadeSlideIn 2s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.animated-button {
+  padding: 14px 28px;
+  border: 2px solid #00ffaa;
+  background: transparent;
+  color: #00ffaa;
+  border-radius: 8px;
+  transition: all 0.3s;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.animated-button:hover {
+  background: #00ffaa;
+  color: #0f0f0f;
+  box-shadow: 0 8px 20px rgba(0, 255, 170, 0.6);
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 255, 170, 0.5);
+}
+
+.project-item.card {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  border: 2px solid #00ffaa;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0, 255, 170, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+  text-align: center;
+  animation: fadeSlideIn 1s ease-out;
+}
+
+.project-item.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 255, 170, 0.7);
+}
+
+.animated-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(145deg, #00ffaa, #0077ff);
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 255, 170, 0.5);
+  cursor: pointer;
+}
+
+
+/* World Map and Skills Graphics */
+.languages-map {
+  margin: 20px 0;
+  width: 80%;
+  height: 500px;
+}
+
+.skills-graphics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.skills-chart {
+  width: 300px;
+  height: 300px;
+}
