@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo" id="logo"><img src="./assets/images/logo.png" alt="Logo" width="40"></div>
+        <a href="#home" class="nav-item" data-section="home" style="background-color: #ffecd2;">Home</a>
+        <a href="#about" class="nav-item" data-section="about" style="background-color: #ffeb3b;">About</a>
+        <a href="#skills" class="nav-item" data-section="skills" style="background-color: #4ecdc4;">Skills</a>
+        <a href="#experience" class="nav-item" data-section="experience" style="background-color: #ff7043;">Experience</a>
+        <a href="#projects" class="nav-item" data-section="projects" style="background-color: #f7b733;">Projects</a>
+        <a href="#languages" class="nav-item" data-section="languages" style="background-color: #96c93d;">Languages</a>
+        <a href="#soft-skills" class="nav-item" data-section="soft-skills" style="background-color: #45b7d1;">Soft Skills</a>
+        <a href="#market-reach" class="nav-item" data-section="market-reach" style="background-color: #ff6b6b;">Market Reach</a>
+    </nav>
+
+    <section id="home" class="section" style="background: radial-gradient(circle, #ffecd2, #fcb69f);">
+        <div id="threeCanvasContainer">
+            <div id="threeCanvas"></div>
+            <div id="welcomeText">
+                <h2>Welcome to My Interactive Portfolio</h2>
+                <p>Click a panel to explore sections. Drag to rotate the view.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section" style="background-color: #ffeb3b;">
+        <h1 class="section-title iceland-regular">About Me</h1>
+        <p class="section-content montserrat-alternates-regular"><img src="assets/images/profilePic.png" alt="Profile Picture" class="profile-pic">
+            
+                I'm Ryan — a Navy veteran turned full-stack web developer, creative technologist, and polyglot. I co-own <strong>StackFX Creative</strong>, specializing in web experiences using React, Next.js, and Three.js.</p>
+                <p class="section-content montserrat-alternates-regular">Outside of work, I enjoy baking, traveling, and exploring the outdoors with my dog, Arya. I'm always diving into new tech and creative projects — let’s build something extraordinary together!
+            </div></p>
+    </section>
+
+    <section id="skills" class="section" style="background-color: #4ecdc4;">
+        <h1 class="section-title iceland-regular">Technical Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="assets/images/react-logo.png" alt="React">
+                <p class="montserrat-alternates-regular">React.js</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/images/nodejs-logo.png" alt="Node.js">
+                <p class="montserrat-alternates-regular">Node.js</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/images/threejs-logo.png" alt="Three.js">
+                <p class="montserrat-alternates-regular">Three.js</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/images/tailwind-logo.png" alt="Tailwind">
+                <p class="montserrat-alternates-regular">Tailwind CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section" style="background-color: #ff7043;">
+        <h1 class="section-title iceland-regular">Experience Timeline</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2006</div>
+                    <img src="assets/images/bvw.png" alt="High School" class="timeline-img">
+                    <p class="montserrat-alternates-regular">High School Graduation</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2008</div>
+                    <img src="assets/images/usn.png" alt="US Navy" class="timeline-img">
+                    <p class="montserrat-alternates-regular">Joined the US Navy</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2018</div>
+                    <img src="assets/images/wyncode.png" alt="Wyncode" class="timeline-img">
+                    <p class="montserrat-alternates-regular">Learned Coding at Wyncode, Miami</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022</div>
+                    <p class="montserrat-alternates-regular">Completed MERN Stack at Digital Film Academy</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2023</div>
+                    <p class="montserrat-alternates-regular">Founded StackFX Creative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" style="background-color: #f7b733;">
+        <h1 class="section-title iceland-regular">Projects</h1>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="assets/images/translator.png" alt="Translator App">
+                <h3 class="montserrat-alternates-regular">Multilingual Phrasebook</h3>
+                <p class="montserrat-alternates-regular">A real-time language learning and translation app.</p>
+            </div>
+            <div class="project-item">
+                <img src="assets/images/norse.png" alt="Norse Slot Machine">
+                <h3 class="montserrat-alternates-regular">Norse-Themed Slot Machine</h3>
+                <p class="montserrat-alternates-regular">An online slot game inspired by Norse mythology.</p>
+            </div>
+            <div class="project-item">
+                <img src="assets/images/taskmaster.png" alt="Taskmaster App">
+                <h3 class="montserrat-alternates-regular">Taskmaster</h3>
+                <p class="montserrat-alternates-regular">A productivity tool for task management and collaboration.</p>
+            </div>
+            <div class="project-item">
+                <img src="assets/images/portfolio.png" alt="Portfolio">
+                <h3 class="montserrat-alternates-regular">Interactive Portfolio</h3>
+                <p class="montserrat-alternates-regular">A 3D portfolio showcasing my skills and projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="section" style="background-color: #96c93d;">
+        <h1 class="section-title iceland-regular">Languages</h1>
+        <div class="language-map-container">
+            <div id="languageMap" class="interactive-map"></div>
+            <p class="section-content montserrat-alternates-regular">I speak French, Spanish, Italian, Portuguese, German, and Mandarin, enabling communication across multiple regions globally.</p>
+        </div>
+    </section>
+
+    <section id="soft-skills" class="section" style="background-color: #45b7d1;">
+        <h1 class="section-title iceland-regular">Soft Skills</h1>
+        <div class="soft-skills-container">
+            <div class="soft-skill">Leadership</div>
+            <div class="soft-skill">Communication</div>
+            <div class="soft-skill">Problem-Solving</div>
+            <div class="soft-skill">Teamwork</div>
+            <div class="soft-skill">Adaptability</div>
+        </div>
+    </section>
+
+    <section id="market-reach" class="section" style="background-color: #ff6b6b;">
+        <h1 class="section-title iceland-regular">Market Reach</h1>
+        <p class="section-content montserrat-alternates-regular">My proficiency in French, Spanish, Italian, Portuguese, German, and Mandarin allows me to engage with markets in Europe, Latin America, Africa, and Asia, covering over 1.5 billion people across these regions. This multilingual capability enhances my ability to connect with diverse audiences, support international business, and foster cross-cultural collaboration.</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
