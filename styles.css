@@ -11,6 +11,25 @@ body {
   color: #333;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: linear-gradient(to bottom, #ffecd2, #fff);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 236, 210, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: pulse 10s infinite ease-in-out;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 /* Navigation Bar */
@@ -24,21 +43,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  z-index: 1000; /* Keep this, but we'll raise threeCanvas above it */
+  padding-top: 0;
+  z-index: 1000;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
-  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }
-#logo{
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  object-fit: stretch;
-  margin: 0 auto;
-  text-align: center;
+
+.nav-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-item {
@@ -52,11 +75,23 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-item:hover, .nav-item.active {
   background-color: rgba(0, 0, 0, 0.1);
   transform: scale(1.1);
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  display: none;
 }
 
 /* Sections */
@@ -69,8 +104,17 @@ body {
   justify-content: center;
   padding: 20px;
   position: relative;
-  transition: transform 0.5s ease;
-  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2)) 1;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-title {
@@ -78,6 +122,18 @@ body {
   color: #000;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  transition: font-size 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.section.visible .section-title {
+  font-size: 96px;
 }
 
 .section-content {
@@ -85,20 +141,26 @@ body {
   font-size: 24px;
   text-align: center;
   color: #000;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-/* Home Section (Planetary Navigation) */
+/* Home Section */
 #home {
-  background: radial-gradient(circle, #ffecd2, #fcb69f);
   position: relative;
-  overflow: hidden; /* Contain particles within section */
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(255, 236, 210, 0.8), rgba(252, 182, 159, 0.5));
 }
-#threeCanvasContainer {
+
+#carouselContainer {
   position: relative;
   width: 100%;
   max-width: 800px;
   height: 600px;
   margin: 0 auto;
+  z-index: 1001;
 }
 
 #threeCanvas {
@@ -114,60 +176,154 @@ body {
   background: transparent;
 }
 
-#welcomeText {
+#carouselControls {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
+  display: flex;
+  gap: 20px;
+  z-index: 1002;
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+#welcomeOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
   z-index: 1002;
   pointer-events: none;
 }
 
-#welcomeText h2 {
+.welcome-title {
   font-family: 'Iceland', serif;
-  font-size: 32px;
+  font-size: 36px;
+  color: #333;
   margin-bottom: 10px;
 }
 
-#welcomeText p {
+.welcome-text {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 18px;
+  color: #555;
 }
 
-@media screen and (max-width: 768px) {
-  #threeCanvasContainer {
-      max-width: 600px;
-      height: 450px;
-  }
-
-  #welcomeText h2 {
-      font-size: 24px;
-  }
-
-  #welcomeText p {
-      font-size: 14px;
-  }
-}
-
-/* Tooltip for navigation labels */
-.tooltip {
+.home-background {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  display: none;
-  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: url('assets/images/background1.svg') no-repeat center right;
+  background-size: cover;
+  z-index: 0;
 }
 
-/* Skills Section */
+/* About Section */
+#about {
+  background: none;
+  overflow: hidden;
+}
+
+.about-portrait-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0;
+}
+
+.portrait-half {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.left-half {
+  left: 0;
+  object-fit: cover;
+  transform: translateX(0);
+}
+
+.right-half {
+  right: 0;
+  object-fit: cover;
+  transform: translateX(0);
+}
+
+#about.visible .left-half {
+  transform: translateX(-100%);
+}
+
+#about.visible .right-half {
+  transform: translateX(100%);
+}
+
+.about-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.about-text {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+#about.visible .about-text {
+  opacity: 1;
+}
+
+/* Skills & Qualities Section */
+#skills-qualities {
+  background: none;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.skills-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('assets/images/background2.svg') no-repeat center right;
+  background-size: cover;
+  z-index: 0;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -187,8 +343,8 @@ body {
 }
 
 .skill-card img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 10px;
   border-radius: 10px;
   object-fit: contain;
@@ -200,35 +356,69 @@ body {
 }
 
 .skill-card p {
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
-/* Timeline Section */
-/* ... (Keep existing styles) ... */
-
-/* Sections */
-.section {
-  min-height: 100vh; /* Allow content to extend if needed */
-  width: 100%;
+.soft-skills-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Align content at the top for scrolling */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   padding: 20px;
-  position: relative;
-  transition: transform 0.5s ease;
-  overflow-y: auto; /* Ensure scrolling is possible */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Timeline Section */
+.soft-skill {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: float 3s infinite ease-in-out;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.soft-skill:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Experience Section */
+#experience {
+  background: none;
+  position: relative;
+}
+
+.experience-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('assets/images/background5.svg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+#sailor {
+
+}
+
 .timeline {
   position: relative;
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px 0;
   overflow: visible;
-  width: 100%; /* Ensure full width within section */
+  width: 100%;
 }
 
 .timeline::after {
@@ -268,7 +458,6 @@ body {
   left: 55%;
 }
 
-/* Timeline Section */
 .timeline-content {
   position: relative;
   padding: 20px;
@@ -276,18 +465,22 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  display: flex; /* Flexbox for layout */
+  display: flex;
   flex-direction: column;
-  align-items: center; /* Center content */
+  align-items: center;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
 }
 
 .timeline-img {
-  width: 80px; /* Uniform size */
+  width: 80px;
   height: 80px;
-  border-radius: 50%; /* Circular frame */
-  object-fit: cover; /* Ensure image fits without distortion */
-  margin-bottom: 10px; /* Space between image and text */
-  border: 2px solid #000; /* Black frame */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #000;
 }
 
 .timeline-date {
@@ -295,20 +488,6 @@ body {
   color: #000;
   margin-bottom: 10px;
 }
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .timeline-img {
-      width: 60px;
-      height: 60px;
-  }
-}
-
-.timeline-content:hover {
-  transform: scale(1.05);
-}
-
-
 
 .timeline-item::before {
   content: '';
@@ -329,24 +508,23 @@ body {
   left: -28px;
 }
 
-/* Dark Mode for Timeline */
-body.dark-mode .timeline::after,
-body.dark-mode .timeline-item::before {
-  background-color: #fff;
-}
-
-body.dark-mode .timeline-content {
-  background-color: #444;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .timeline-date {
-  color: #fff;
-}
-
-/* ... (Keep remaining CSS) ... */
-
 /* Projects Section */
+#projects {
+  background: none;
+  position: relative;
+}
+
+.projects-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 25vh;
+  background: url('assets/images/background4.svg') no-repeat bottom right;
+  background-size: cover;
+  z-index: 0;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -372,18 +550,23 @@ body.dark-mode .timeline-date {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-item h3, .project-item p {
   color: #000;
 }
 
-/* Language Map Container */
+/* Languages & Market Reach Section */
+#languages-market {
+  background: none;
+}
+
 .language-map-container {
   display: flex;
   flex-direction: column;
@@ -401,36 +584,195 @@ body.dark-mode .timeline-date {
   margin-bottom: 20px;
 }
 
-/* Soft Skills Section */
-.soft-skills-container {
+/* Contact Section */
+#contact {
+  background-image: url('assets/images/background6.svg');
+}
+
+.contact-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  padding: 20px;
-  max-width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.soft-skill {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  animation: float 3s infinite ease-in-out;
+#contactCanvas {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.soft-skill:hover {
-  transform: scale(1.1);
+.contact-form button:hover {
+  background-color: #333;
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+      width: 60px;
+  }
+
+  .nav-item {
+      padding: 10px 0;
+      font-size: 14px;
+  }
+
+  .section-title {
+      font-size: 48px;
+  }
+
+  .section-content, .skill-card p {
+      font-size: 16px;
+  }
+
+  .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .skill-card img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .skill-card p {
+      font-size: 14px;
+  }
+
+  .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: left;
+  }
+
+  .timeline-item::before {
+      left: 10px;
+      right: auto;
+  }
+
+  #threeCanvas, #contactCanvas {
+      max-width: 600px;
+      height: 450px;
+  }
+
+  .interactive-map {
+      height: 300px;
+  }
+
+  .soft-skills-container {
+      gap: 5px;
+      padding: 10px;
+  }
+
+  .soft-skill {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+
+  .about-portrait-container {
+      height: 100vh;
+  }
+
+  .portrait-half {
+      width: 50%;
+      height: 100%;
+  }
+
+  .home-background {
+      width: 100%;
+      opacity: 0.5;
+  }
+
+  #carouselContainer {
+      max-width: 600px;
+      height: 450px;
+  }
+
+  #threeCanvas {
+      max-width: 600px;
+      height: 450px;
+  }
+
+  #carouselControls {
+      gap: 10px;
+  }
+
+  .carousel-btn {
+      padding: 8px 15px;
+  }
+
+  #welcomeOverlay {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .welcome-title {
+      font-size: 28px;
+  }
+
+  .welcome-text {
+      font-size: 16px;
+  }
+
+  .skills-background, .experience-background {
+      width: 100%;
+      opacity: 0.5;
+  }
+
+  .projects-background {
+      width: 50%;
+      height: 50vh;
+  }
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  z-index: 1000;
 }
 
 /* Dark Mode */
@@ -443,8 +785,11 @@ body.dark-mode {
   background-color: #333;
 }
 
-.dark-mode .nav-item {
+.dark-mode .nav-bar {
   background: #444;
+}
+
+.dark-mode .nav-item {
   color: #fff;
 }
 
@@ -469,7 +814,7 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-.dark-mode #threeCanvas {
+.dark-mode #threeCanvas, .dark-mode #contactCanvas {
   border-color: #444;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
@@ -479,66 +824,16 @@ body.dark-mode {
   color: #000;
 }
 
-/* Particle Effects Styling */
-.particle {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  pointer-events: none;
+.dark-mode #welcomeOverlay {
+  background: rgba(68, 68, 68, 0.9);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .nav-bar {
-      width: 60px;
-  }
+.dark-mode .welcome-title {
+  color: #fff;
+}
 
-  .nav-item {
-      padding: 10px 0;
-      font-size: 14px;
-  }
-
-  .section-title {
-      font-size: 48px;
-  }
-
-  .section-content, .skill-card p {
-      font-size: 16px;
-  }
-
-  .skills-grid, .projects-grid {
-      grid-template-columns: 1fr;
-  }
-
-  .timeline-item {
-      width: 100%;
-      left: 0 !important;
-      text-align: left;
-  }
-
-  .timeline-item::before {
-      left: 10px;
-      right: auto;
-  }
-
-  #threeCanvas {
-      max-width: 600px;
-      height: 450px;
-  }
-
-  .interactive-map {
-      height: 300px;
-  }
-
-  .soft-skills-container {
-      gap: 5px;
-      padding: 10px;
-  }
-
-  .soft-skill {
-      padding: 8px 15px;
-      font-size: 14px;
-  }
+.dark-mode .welcome-text {
+  color: #ddd;
 }
 
 /* Font Definitions */
@@ -552,15 +847,4 @@ body.dark-mode {
   font-family: "Iceland", serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-
 }
