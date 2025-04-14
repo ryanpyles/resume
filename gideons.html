@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gideon's Inferno - A Satirical Descent Into Bureaucratic Hell">
+  <title>Gideon's Inferno</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.from('.inferno-hero h1', { opacity: 0, y: -50, duration: 1 });
+      gsap.from('.inferno-hero p', { opacity: 0, y: 30, duration: 1, delay: 0.3 });
+      gsap.from('.inferno-content', {
+        scrollTrigger: {
+          trigger: '.inferno-content',
+          start: 'top 80%',
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: 'power2.out'
+      });
+    });
+  </script>
+</head>
+<body>
+  <section class="panel hero-panel inferno-hero" style="background: url('assets/images/gideons-cover.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h1>Gideon's Inferno</h1>
+      <p class="hero-subtitle">A satirical descent into bureaucratic hell.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-content inferno-content">
+      <h2 class="section-title">About the Book</h2>
+      <p class="section-content">
+        When burned-out Navy vet Gideon Cross signs a lease with Faust Luxury Residences, he unknowingly enters a binding contract with the absurd and infernal. As floors rearrange themselves, mailboxes whisper secrets, and customer support agents offer no escape, Gideon must find a loophole in the fine print of Hell itself.
+      </p>
+    </div>
+  </section>
+
+  <footer class="portfolio-footer">
+    &copy; 2025 Ryan Pyles. All Rights Reserved.
+  </footer>
+</body>
+</html>

@@ -1,226 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio - Ryan Pyles</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ryan Pyles – Designer, Developer, Linguist, Global Citizen, Navy Veteran, Dog Dad" />
+  <title>Ryan Pyles | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  <!-- App -->
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="nav-bar">
-        <div class="nav-logo"><img src="./assets/images/logo.svg" alt="Logo" class="nav-logo-img"></div>
-        <a href="#home" class="nav-item" data-section="home" style="background-color: #ffecd2;">Home</a>
-        <a href="#about" class="nav-item" data-section="about" style="background-color: #ffd700;">About</a>
-        <a href="#skills-qualities" class="nav-item" data-section="skills-qualities" style="background-color: #26a69a;">Skills & Qualities</a>
-        <a href="#experience" class="nav-item" data-section="experience" style="background-color: #f4511e;">Experience</a>
-        <a href="#projects" class="nav-item" data-section="projects" style="background-color: #e65100;">Projects</a>
-        <a href="#languages-market" class="nav-item" data-section="languages-market" style="background-color: #689f38;">Languages & Market Reach</a>
-        <a href="#contact" class="nav-item" data-section="contact" style="background-color: #e91e63;">Contact</a>
-    </nav>
+  <!-- Full‑screen Navigation -->
+  <nav id="fullscreenMenu" class="fullscreen-menu">
+    <button class="menu-item" data-section="hero">Home</button>
+    <button class="menu-item" data-section="about">About</button>
+    <button class="menu-item" data-section="languages">Languages</button>
+    <button class="menu-item" data-section="timeline">Timeline</button>
+    <button class="menu-item" data-section="skills">Skills</button>
+    <button class="menu-item" data-section="projects">Projects</button>
+    <button class="menu-item" data-section="contact">Contact</button>
+    <button class="menu-item" onclick="location.href='gideons.html'">Gideon's Inferno</button>
+    <button class="menu-item" onclick="location.href='shift.html'">Shift Happens</button>
+  </nav>
 
-    <div id="loadingSpinner"></div>
+  <!-- Hamburger -->
+  <button id="hamburger" aria-label="Toggle navigation" class="hamburger-menu">
+    <span></span><span></span><span></span>
+  </button>
 
-    <section id="home" class="section" style="background: radial-gradient(circle, rgba(255, 236, 210, 0.8), rgba(252, 182, 159, 0.5));">
-        <div id="carouselContainer">
-            <div id="threeCanvas"></div>
-            <div id="carouselControls">
-                <button id="prevBtn" class="carousel-btn">←</button>
-                <button id="nextBtn" class="carousel-btn">→</button>
-            </div>
-            <div id="welcomeOverlay">
-                <h2 class="welcome-title">Welcome to My Interactive Portfolio</h2>
-                <p class="welcome-text">Explore my work by hovering over the polygons to reveal their shapes. Drag or use the arrows to rotate the carousel, then click to dive into each section.</p>
-            </div>
-        </div>
-        <div class="home-background"></div>
-    </section>
+  <!-- Hero -->
+  <section id="hero" class="panel hero-panel fragmented-hero" data-bg="assets/images/hero-bg.svg">
+    <div class="hero-layers">
+      <div class="layer tech"></div>
+      <div class="layer author"></div>
+      <div class="layer global"></div>
+      <div class="layer vet"></div>
+      <div class="layer dog"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Ryan Pyles</h1>
+      <p class="hero-subtitle">Author. Developer. Explorer. Veteran. Dog Dad.</p>
+      <button id="explorePortfolio" data-section="about">Explore my portfolio</button>
+      <div class="hero-toggle-icons">
+        <img src="assets/icons/dev-icon.svg" data-layer="tech" class="hero-icon active" title="Developer" />
+        <img src="assets/icons/author-icon.svg" data-layer="author" class="hero-icon" title="Author" />
+        <img src="assets/icons/global-icon.svg" data-layer="global" class="hero-icon" title="Global Citizen" />
+        <img src="assets/icons/vet-icon.svg" data-layer="vet" class="hero-icon" title="Veteran" />
+        <img src="assets/icons/dog-icon.svg" data-layer="dog" class="hero-icon" title="Dog Dad" />
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-        <h1 class="section-title iceland-regular">About Me</h1>
-        <div class="about-portrait-container">
-            <img src="assets/images/left-half.svg" alt="Left Half" class="portrait-half left-half">
-            <img src="assets/images/right-half.svg" alt="Right Half" class="portrait-half right-half">
-            <div class="about-text-container">
-                <p class="section-content montserrat-alternates-regular about-text">I’m Ryan Pyles, a Navy veteran turned full-stack developer with a passion for crafting innovative web experiences. My journey began in the military, where I honed skills in discipline, teamwork, and adaptability—qualities that now fuel my approach to technology. After transitioning to civilian life, I dove into coding at Wyncode in Miami, mastering the MERN stack and beyond, and later founded StackFX Creative to bring my vision to life.</p>
-                <p class="section-content montserrat-alternates-regular about-text">With a blend of technical expertise and creative curiosity, I thrive on exploring new tools like Three.js and building projects that bridge art and code. My multilingual abilities—French, Spanish, Italian, Portuguese, German, and Mandarin—enable me to connect with diverse audiences and tackle global challenges. Whether it’s developing interactive portfolios or designing multilingual apps, I’m driven by a desire to push boundaries and deliver impactful solutions.</p>
-            </div>
-            <div class="profile-watermark"></div>
-        </div>
-    </section>
+  <!-- About -->
+  <section id="about" class="panel" data-bg="assets/images/about-bg.jpg">
+    <div class="panel-content">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-content">
+        I'm a multi‑talented designer, developer, linguist, global citizen, Navy veteran and dog dad. Passionate about blending creativity with technology, my journey spans continents and industries.
+      </p>
+    </div>
+  </section>
 
-    <section id="skills-qualities" class="section">
-        <h1 class="section-title iceland-regular">Skills & Qualities</h1>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="assets/images/react-logo.png" alt="React">
-                <p class="montserrat-alternates-regular">React.js</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/nodejs-logo.png" alt="Node.js">
-                <p class="montserrat-alternates-regular">Node.js</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/threejs-logo.png" alt="Three.js">
-                <p class="montserrat-alternates-regular">Three.js</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/tailwind-logo.png" alt="Tailwind">
-                <p class="montserrat-alternates-regular">Tailwind CSS</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/html-logo.png" alt="HTML">
-                <p class="montserrat-alternates-regular">HTML</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/css-logo.png" alt="CSS">
-                <p class="montserrat-alternates-regular">CSS</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/mongodb-logo.png" alt="MongoDB">
-                <p class="montserrat-alternates-regular">MongoDB</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/python-logo.png" alt="Python">
-                <p class="montserrat-alternates-regular">Python</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/ruby-logo.png" alt="Ruby">
-                <p class="montserrat-alternates-regular">Ruby</p>
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/javascript-logo.png" alt="JavaScript">
-                <p class="montserrat-alternates-regular">JavaScript</p>
-            </div>
-        </div>
-        <div class="soft-skills-container">
-            <div class="soft-skill">Leadership</div>
-            <div class="soft-skill">Communication</div>
-            <div class="soft-skill">Problem-Solving</div>
-            <div class="soft-skill">Teamwork</div>
-            <div class="soft-skill">Adaptability</div>
-        </div>
-        <div class="skills-background"></div>
-    </section>
+  <!-- Languages -->
+  <section id="languages" class="panel" data-bg="assets/images/languages-bg.jpg">
+    <div class="panel-content">
+      <h2 class="section-title">Languages</h2>
+      <div id="languageMap" class="language-map-container"></div>
+      <p class="language-legend">Click the flags to explore countries where these languages are spoken.</p>
+    </div>
+  </section>
 
-    <section id="experience" class="section">
-        <h1 class="section-title iceland-regular">Experience Timeline</h1>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2006</div>
-                    <img src="assets/images/bvw.svg" alt="High School" class="timeline-img">
-                    <p class="montserrat-alternates-regular">High School Graduation</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2008</div>
-                    <img src="assets/images/usn.svg" alt="US Navy" class="timeline-img">
-                    <p class="montserrat-alternates-regular">Joined the US Navy</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2014</div>
-                    <p class="montserrat-alternates-regular">Completed Navy Service Deployment</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2018</div>
-                    <img src="assets/images/wyncode.svg" alt="Wyncode" class="timeline-img">
-                    <p class="montserrat-alternates-regular">Learned Coding at Wyncode, Miami</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2020</div>
-                    <p class="montserrat-alternates-regular">Freelance Web Developer</p>
-                </div>
-            </div>
-            <div id="sailor timel"></div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2022</div>
-                    <p class="montserrat-alternates-regular">Completed MERN Stack at Digital Film Academy</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2023</div>
-                    <img src="assets/images/sfxc.svg" alt="StackFX Creative" class="timeline-img">
-                    <p class="montserrat-alternates-regular">Founded StackFX Creative</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Timeline -->
+  <section id="timeline" class="panel">
+    <div class="panel-content">
+      <h2 class="section-title">Timeline</h2>
+      <div id="timelineContainer" class="timeline-container"></div>
+      <!-- Timeline controls will be injected here -->
+    </div>
+  </section>
+  
 
-    <section id="projects" class="section">
-        <h1 class="section-title iceland-regular">Projects</h1>
-        <div class="projects-grid">
-            <div class="project-item">
-                <img src="assets/images/translator.png" alt="Translator App">
-                <h3 class="montserrat-alternates-regular">Multilingual Phrasebook</h3>
-                <p class="montserrat-alternates-regular">A real-time language learning and translation app.</p>
-            </div>
-            <div class="project-item">
-                <img src="assets/images/norse.png" alt="Norse Slot Machine">
-                <h3 class="montserrat-alternates-regular">Norse-Themed Slot Machine</h3>
-                <p class="montserrat-alternates-regular">An online slot game inspired by Norse mythology.</p>
-            </div>
-            <div class="project-item">
-                <img src="assets/images/taskmaster.png" alt="Taskmaster App">
-                <h3 class="montserrat-alternates-regular">Taskmaster</h3>
-                <p class="montserrat-alternates-regular">A productivity tool for task management and collaboration.</p>
-            </div>
-            <div class="project-item">
-                <img src="assets/images/portfolio.png" alt="Portfolio">
-                <h3 class="montserrat-alternates-regular">Interactive Portfolio</h3>
-                <p class="montserrat-alternates-regular">A 3D portfolio showcasing my skills and projects.</p>
-            </div>
-            <div class="project-item">
-                <img src="assets/images/memoir.png" alt="Memoir Book">
-                <h3 class="montserrat-alternates-regular">This is What it has Come to</h3>
-                <p class="montserrat-alternates-regular">A memoir reflecting on personal experiences.</p>
-            </div>
-            <div class="project-item">
-                <img src="assets/images/shifthappens.png" alt="Shift Happens Book">
-                <h3 class="montserrat-alternates-regular">Shift Happens</h3>
-                <p class="montserrat-alternates-regular">An existential/psychological horror novel.</p>
-            </div>
-        </div>
-        <div class="projects-background"></div>
-    </section>
+  <!-- Skills -->
+  <section id="skills" class="panel" data-bg="assets/images/skills-bg.jpg">
+    <div class="panel-content">
+      <h2 class="section-title">Skills</h2>
+      <div id="skillsContainer" class="skills-grid"></div>
+    </div>
+  </section>
 
-    <section id="languages-market" class="section" style="background: none;">
-        <h1 class="section-title iceland-regular">Languages & Market Reach</h1>
-        <div class="language-map-container">
-            <div id="languageMap" class="interactive-map"></div>
-            <p class="section-content montserrat-alternates-regular">My proficiency in French, Spanish, Italian, Portuguese, German, and Mandarin allows me to engage with markets in Europe, Latin America, Africa, and Asia, covering over 1.5 billion people across these regions. This multilingual capability enhances my ability to connect with diverse audiences, support international business, and foster cross-cultural collaboration.</p>
-        </div>
-    </section>
+  <!-- Projects -->
+  <section id="projects" class="panel" data-bg="assets/images/projects-bg.jpg">
+    <div class="panel-content">
+      <h2 class="section-title">Projects</h2>
+      <div id="projectsContainer" class="projects-grid"></div>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-        <h1 class="section-title iceland-regular">Contact Me</h1>
-        <div class="contact-container">
-            <div id="contactCanvas"></div>
-            <form class="contact-form" id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="panel" data-bg="assets/images/contact-bg.jpg">
+    <div class="panel-content">
+      <h2 class="section-title">Contact</h2>
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactSuccess" class="contact-success-message">Thank you! I'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <p class="montserrat-alternates-regular">© 2025 Ryan Pyles</p>
-    </footer>
+  <!-- Custom Cursor -->
+  <div id="customCursor" class="custom-cursor"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="portfolio-footer">© 2025 Ryan Pyles. All Rights Reserved.</footer>
 </body>
 </html>

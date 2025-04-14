@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Leadership",
+    "percent": 95,
+    "icon": "assets/images/leadership.svg"
+  },
+  {
+    "name": "Problem Solving",
+    "percent": 92,
+    "icon": "assets/images/problem-solving.svg"
+  },
+  {
+    "name": "Communication",
+    "percent": 90,
+    "icon": "assets/images/communication.svg"
+  },
+  {
+    "name": "Creativity",
+    "percent": 88,
+    "icon": "assets/images/creativity.svg"
+  },
+  {
+    "name": "Teamwork",
+    "percent": 93,
+    "icon": "assets/images/teamwork.svg"
+  },
+  {
+    "name": "Time Management",
+    "percent": 89,
+    "icon": "assets/images/time-management.svg"
+  },
+  {
+    "name": "Adaptability",
+    "percent": 94,
+    "icon": "assets/images/adaptability.svg"
+  },
+  {
+    "name": "Critical Thinking",
+    "percent": 91,
+    "icon": "assets/images/critical-thinking.svg"
+  }
+]

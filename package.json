@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanpyles/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ryanpyles/resume/issues"
+  },
+  "homepage": "https://github.com/ryanpyles/resume#readme",
+  "dependencies": {
+    "three": "^0.174.0"
+  }
+}

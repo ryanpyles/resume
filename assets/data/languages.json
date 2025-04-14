@@ -1,0 +1,443 @@
+[
+  {
+    "name": "English",
+    "total speakers": "1500000000",
+    "native speakers": "370000000",
+    "icon": "assets/icons/en-icon.svg",
+    "countries": [
+      {
+        "flag": "🇬🇧",
+        "name": "United Kingdom",
+        "capital": "London",
+        "population": 67000000
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "population": 331000000
+      },
+      {
+        "flag": "🇦🇺",
+        "name": "Australia",
+        "capital": "Canberra",
+        "population": 26000000
+      },
+      {
+        "flag": "🇳🇿",
+        "name": "New Zealand",
+        "capital": "Wellington",
+        "population": 5000000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Canada",
+        "capital": "Ottawa",
+        "population": 38000000
+      },
+      {
+        "flag": "🇮🇪",
+        "name": "Ireland",
+        "capital": "Dublin",
+        "population": 5000000
+      }
+    ]
+  },
+  {
+    "name": "French/Français",
+    "total speakers": "274000000",
+    "native speakers": "80 million",
+    "icon": "assets/icons/fr-icon.svg",
+    "countries": [
+      {
+        "flag": "🇫🇷",
+        "name": "France",
+        "capital": "Paris",
+        "population": 67000000
+      },
+      {
+        "flag": "🇧🇪",
+        "name": "Belgium",
+        "capital": "Brussels",
+        "population": 11500000
+      },
+      {
+        "flag": "🇨🇭",
+        "name": "Switzerland/Suisse",
+        "capital": "Bern",
+        "population": 8700000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Canada",
+        "capital": "Ottawa",
+        "population": 38000000
+      },
+      {
+        "flag": "🇧🇪",
+        "name": "Belgium/Belgique",
+        "capital": "Brussels",
+        "population": 11500000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Canada",
+        "capital": "Ottawa",
+        "population": 38000000
+      },
+      { 
+        "flag": "🇧🇫",
+        "name": "Senegal/Sénégal",
+        "capital": "Dakar",
+        "population": 17000000
+      },
+      {
+        "flag": "🇧🇫",
+        "name": "Burkina Faso",
+        "capital": "Ouagadougou",
+        "population": 21000000
+      },
+      {
+        "flag": "🇨🇩",
+        "name": "Democratic Republic of the Congo/République Démocratique du Congo",
+        "capital": "Kinshasa",
+        "population": 89000000
+      },
+      {
+        "flag": "🇨🇮",
+        "name": "Ivory Coast/Côte d'Ivoire",
+        "capital": "Yamoussoukro",
+        "population": 26000000
+      },
+      {
+        "flag": "🇲🇱",
+        "name": "Mali",
+        "capital": "Bamako",
+        "population": 20000000
+      },
+      {
+        "flag": "🇧🇮",
+        "name": "Burundi",
+        "capital": "Gitega",
+        "population": 12000000
+      },
+      {
+        "flag": "🇷🇪",
+        "name": "Réunion",
+        "capital": "Saint-Denis",
+        "population": 850000
+      },
+      {
+        "flag": "🇷🇪",
+        "name": "Mayotte",
+        "capital": "Mamoudzou",
+        "population": 300000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Gabon",
+        "capital": "Libreville",
+        "population": 2200000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Cameroon/Cameroun",
+        "capital": "Yaoundé",
+        "population": 26000000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Central African Republic/République Centrafricaine",
+        "capital": "Bangui",
+        "population": 5500000
+      }
+    ]
+  },
+  {
+    "name": "Spanish/Español",
+    "total speakers": "580000000",
+    "native speakers": "460000000",
+    "icon": "assets/icons/es-icon.svg",
+    "countries": [
+      {
+        "flag": "🇪🇸",
+        "name": "Spain/España",
+        "capital": "Madrid",
+        "population": 47000000
+      },
+      {
+        "flag": "🇲🇽",
+        "name": "Mexico",
+        "capital": "Mexico City",
+        "population": 128900000
+      },
+      {
+        "flag": "🇨🇴",
+        "name": "Colombia",
+        "capital": "Bogotá",
+        "population": 50900000
+      },
+      {
+        "flag": "🇦🇷",
+        "name": "Argentina",
+        "capital": "Buenos Aires",
+        "population": 45800000
+      },
+      {
+        "flag": "🇻🇪",
+        "name": "Venezuela",
+        "capital": "Caracas",
+        "population": 28700000
+      },
+      {
+        "flag": "🇨🇱",
+        "name": "Chile",
+        "capital": "Santiago",
+        "population": 19200000
+      },
+      {
+        "flag": "🇵🇪",
+        "name": "Peru",
+        "capital": "Lima",
+        "population": 33000000
+      },
+      {
+        "flag": "🇺🇾",
+        "name": "Uruguay",
+        "capital": "Montevideo",
+        "population": 3500000
+      },
+      {
+        "flag": "🇨🇺",
+        "name": "Cuba",
+        "capital": "Havana",
+        "population": 11300000
+      },
+      {
+        "flag": "🇵🇷",
+        "name": "Puerto Rico",
+        "capital": "San Juan",
+        "population": 3200000
+      },
+      {
+        "flag": "🇬🇹",
+        "name": "Guatemala",
+        "capital": "Guatemala City",
+        "population": 17900000
+      },
+      {
+        "flag": "🇭🇳",
+        "name": "Honduras",
+        "capital": "Tegucigalpa",
+        "population": 10000000
+      },
+      {
+        "flag": "🇸🇻",
+        "name": "El Salvador",
+        "capital": "San Salvador",
+        "population": 6300000
+      },
+      {
+        "flag": "🇳🇮",
+        "name": "Nicaragua",
+        "capital": "Managua",
+        "population": 6700000
+      },
+      {
+        "flag": "🇵🇦",
+        "name": "Panama",
+        "capital": "Panama City",
+        "population": 4300000
+      },
+      {
+        "flag": "🇨🇴",
+        "name": "Costa Rica",
+        "capital": "San José",
+        "population": 5100000
+      },
+      {
+        "flag": "🇪🇨",
+        "name": "Ecuador",
+        "capital": "Quito",
+        "population": 17000000
+      },
+      {
+        "flag": "🇧🇴",
+        "name": "Bolivia",
+        "capital": "Sucre",
+        "population": 12000000
+      },
+      {
+        "flag": "🇵🇾",
+        "name": "Paraguay",
+        "capital": "Asunción",
+        "population": 7000000
+      },
+      {
+        "flag": "🇨🇺",
+        "name": "Cuba",
+        "capital": "Havana",
+        "population": 11300000
+      },
+      {
+        "flag": "🇩🇴",
+        "name": "Dominican Republic",
+        "capital": "Santo Domingo",
+        "population": 11000000
+      },
+      
+      {
+        "flag": "🇪🇨",
+        "name": "Ecuador",
+        "capital": "Quito",
+        "population": 17000000
+      },
+      {
+        "flag": "🇧🇴",
+        "name": "Bolivia",
+        "capital": "Sucre",
+        "population": 12000000
+      },
+      {
+        "flag": "🇵🇾",
+        "name": "Paraguay",
+        "capital": "Asunción",
+        "population": 7000000
+      }
+    ]
+  },
+  {
+    "name": "Italiano/Italian",
+    "total speakers": "85000000",
+    "native speakers": "70000000",
+    "icon": "assets/icons/it-icon.svg",
+    "countries": [
+      {
+        "flag": "🇮🇹",
+        "name": "Italy/Italia",
+        "capital": "Rome/Roma",
+        "population": 59000000
+      },
+      {
+        "flag": "🇨🇭",
+        "name": "Switzerland/Svizzera",
+        "capital": "Bern",
+        "population": 8700000
+      },
+      {
+        "flag": "🇸🇲",
+        "name": "San Marino",
+        "capital": "San Marino",
+        "population": 34000
+      }
+    ]
+  },
+  {
+    "name": "Portuguese/Português",
+    "total speakers": "260000000",
+    "native speakers": "220000000",
+    "icon": "assets/icons/pt-icon.svg",
+    "countries": [
+      {
+        "flag": "🇵🇹",
+        "name": "Portugal",
+        "capital": "Lisbon/Lisboa",
+        "population": 10300000
+      },
+      {
+        "flag": "🇧🇷",
+        "name": "Brazil",
+        "capital": "Brasília",
+        "population": 214000000
+      },
+      {
+        "flag": "🇦🇴",
+        "name": "Angola",
+        "capital": "Luanda",
+        "population": 33900000
+      },
+      {
+        "flag": "🇨🇦",
+        "name": "Cape Verde",
+        "capital": "Praia",
+        "population": 570000
+      },
+      {
+        "flag": "🇲🇿",
+        "name": "Mozambique",
+        "capital": "Maputo",
+        "population": 31300000
+      }
+    ]
+  },
+  {
+    "name": "German/Deutsch",
+    "total speakers": "135000000",
+    "native speakers": "76000000",
+    "icon": "assets/icons/de-icon.svg",
+    "countries": [
+      {
+        "flag": "🇩🇪",
+        "name": "Germany/Deutschland",
+        "capital": "Berlin",
+        "population": 83200000
+      },
+      {
+        "flag": "🇦🇹",
+        "name": "Austria/Österreich",
+        "capital": "Vienna/Wien",
+        "population": 9000000
+      },
+      {
+        "flag": "🇨🇭",
+        "name": "Switzerland/Schweiz",
+        "capital": "Bern",
+        "population": 8700000
+      },
+      {
+        "flag": "🇧🇪",
+        "name": "Belgium/Belgique/België",
+        "capital": "Brussels/Bruxelles/Brussel",
+        "population": 11500000
+      },
+      {
+        "flag": "🇸🇰",
+        "name": "Liechtenstein",
+        "capital": "Vaduz",
+        "population": 38000
+      }
+    ]
+  },
+  {
+    "name": "Mandarin/简体字/繁体字",
+    "total speakers": "1200000000",
+    "native speakers": "920000000",
+    "icon": "assets/icons/zh-icon.svg",
+    "countries": [
+      {
+        "flag": "🇨🇳",
+        "name": "China/中国",
+        "capital": "Beijing/北京",
+        "population": 1411000000
+      },
+      {
+        "flag": "🇹🇼",
+        "name": "Taiwan/台灣",
+        "capital": "Taipei/台北",
+        "population": 23400000
+      },
+      {
+        "flag": "🇸🇬",
+        "name": "Singapore/新加坡",
+        "capital": "Singapore",
+        "population": 5600000
+      },
+      {
+        "flag": "🇭🇰",
+        "name": "Hong Kong/香港",
+        "capital": "Hong Kong",
+        "population": 7500000
+      }
+    ]
+  }
+]

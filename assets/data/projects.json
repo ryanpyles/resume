@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Interactive 3D Portfolio",
+    "description": "An immersive 3D portfolio showcasing personal projects and skills using React Three Fiber.",
+    "image": "assets/images/rjp-logo.svg",
+    "tech": ["React", "ThreeJS", "GSAP", "Framer Motion"]
+  },
+  { 
+    "title": "Gideons Inferno",
+    "description": "Wrote, edited, and published a full-length novel blending dark humor with speculative fiction. Gideon's Inferno follows a Navy veteran trapped by a supernatural lease in a bureaucratic nightmare where rent is paid in memories. The project demonstrates strengths in original storytelling, worldbuilding, character development, and genre fusion—drawing inspiration from Dante's Inferno, Kafka, and modern absurdist satire. Available in hardcover, paperback, and ebook formats.",
+  "image": "assets/images/gideons-inferno.svg", 
+  "tech": ["Writing", "Editing", "Publishing", "Generative AI"]
+}, 
+  {
+    "title": "Shift Happens",
+    "description": "A novel and companion web app to a novel written, edited and published by the author. The novel is a psychological/existential thriller written from three first-person perspectives, exploring the themes of identity, trauma, and the human experience. The web app serves as an interactive companion to the novel, providing additional content and resources for readers.",
+    "image": "assets/images/shift-happens.svg",
+    "tech": ["Svelte", "GraphQL", "GSAP"]
+  },
+
+  {
+    "title": "Arya's Day",
+    "description": "A pet tracking app that helps monitor daily routines, nutrition, and health of pets.",
+    "image": "assets/images/dog.svg",
+    "tech": ["React Native", "Firebase", "Expo"]
+  },
+  {
+    "title": "Task Manager",
+    "description": "A productivity tool to manage tasks efficiently, integrating intuitive UI and task priorities.",
+    "image": "assets/images/task-master.svg",
+    "tech": ["VueJS", "NodeJS", "MongoDB"]
+  },
+  {
+    "title": "Dreamscape Generator",
+    "description": "AI-driven app generating surreal 3D dream environments based on user input.",
+    "image": "assets/images/dreamscape.svg",
+    "tech": ["NextJS", "WebGL", "OpenAI API"]
+  },
+  {
+    "title": "Slang Savant",
+    "description": "An interactive phrasebook of current and relevant slang in six different languages.",
+    "image": "assets/images/slang-savant.svg",
+    "tech": ["React", "Material UI", "Text-to-Speech API"]
+  },
+  {
+    "title": "Slot Machine Norse Theme",
+    "description": "Online slot machine game inspired by Norse mythology with interactive animations.",
+    "image": "assets/images/norse.svg",
+    "tech": ["PhaserJS", "TypeScript", "GSAP"]
+  }
+]

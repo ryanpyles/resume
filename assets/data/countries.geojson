@@ -1,0 +1,465 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [133.7751, -25.2744] },
+        "properties": {
+          "name": "Australia",
+          "emoji": "🇦🇺",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [47.5769, -18.7669] },
+        "properties": {
+          "name": "Madagascar",
+          "emoji": "🇲🇬",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-3.4359, 55.3781] },
+        "properties": {
+          "name": "United Kingdom",
+          "emoji": "🇬🇧",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-102.5528, 23.6345] },
+        "properties": {
+          "name": "Mexico",
+          "emoji": "🇲🇽",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-106.3468, 56.1304] },
+        "properties": {
+          "name": "Canada",
+          "emoji": "🇨🇦",
+          "languages": ["English", "French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [2.2137, 46.2276] },
+        "properties": {
+          "name": "France",
+          "emoji": "🇫🇷",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [4.4699, 50.5039] },
+        "properties": {
+          "name": "Belgium",
+          "emoji": "🇧🇪",
+          "languages": ["French", "German", "Dutch"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [8.2275, 46.8182] },
+        "properties": {
+          "name": "Switzerland",
+          "emoji": "🇨🇭",
+          "languages": ["German", "French", "Italian"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [6.1296, 49.8153] },
+        "properties": {
+          "name": "Luxembourg",
+          "emoji": "🇱🇺",
+          "languages": ["French", "German", "Luxembourgish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [7.4246, 46.9807] },
+        "properties": {
+          "name": "Liechtenstein",
+          "emoji": "🇱🇮",
+          "languages": ["German"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [10.4515, 51.1657] },
+        "properties": {
+          "name": "Germany",
+          "emoji": "🇩🇪",
+          "languages": ["German"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [14.5501, 47.5162] },
+        "properties": {
+          "name": "Austria",
+          "emoji": "🇦🇹",
+          "languages": ["German"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [12.5674, 41.8719] },
+        "properties": {
+          "name": "Italy",
+          "emoji": "🇮🇹",
+          "languages": ["Italian"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-8.2245, 39.3999] },
+        "properties": {
+          "name": "Portugal",
+          "emoji": "🇵🇹",
+          "languages": ["Portuguese"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-51.9253, -14.2350] },
+        "properties": {
+          "name": "Brazil",
+          "emoji": "🇧🇷",
+          "languages": ["Portuguese"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [17.8739, -11.2027] },
+        "properties": {
+          "name": "Angola",
+          "emoji": "🇦🇴",
+          "languages": ["Portuguese"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [35.5296, -18.6657] },
+        "properties": {
+          "name": "Mozambique",
+          "emoji": "🇲🇿",
+          "languages": ["Portuguese"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [120.9605, 23.6978] },
+        "properties": {
+          "name": "Taiwan",
+          "emoji": "🇹🇼",
+          "languages": ["Mandarin"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [104.1954, 35.8617] },
+        "properties": {
+          "name": "China",
+          "emoji": "🇨🇳",
+          "languages": ["Mandarin"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [103.8198, 1.3521] },
+        "properties": {
+          "name": "Singapore",
+          "emoji": "🇸🇬",
+          "languages": ["English", "Mandarin", "Malay", "Tamil"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [2.5, 48.5] },
+        "properties": {
+          "name": "Monaco",
+          "emoji": "🇲🇨",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [7.4128, 43.7384] },
+        "properties": {
+          "name": "San Marino",
+          "emoji": "🇸🇲",
+          "languages": ["Italian"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [6.0839, 46.2332] },
+        "properties": {
+          "name": "Aosta Valley (IT)",
+          "emoji": "🇮🇹",
+          "languages": ["Italian", "French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-74.2973, 4.5709] },
+        "properties": {
+          "name": "Colombia",
+          "emoji": "🇨🇴",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-63.6167, -38.4161] },
+        "properties": {
+          "name": "Argentina",
+          "emoji": "🇦🇷",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-75.0152, -9.1899] },
+        "properties": {
+          "name": "Peru",
+          "emoji": "🇵🇪",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-71.5429, -35.6751] },
+        "properties": {
+          "name": "Chile",
+          "emoji": "🇨🇱",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-3.7492, 40.4637] },
+        "properties": {
+          "name": "Spain",
+          "emoji": "🇪🇸",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-66.5897, 6.4238] },
+        "properties": {
+          "name": "Venezuela",
+          "emoji": "🇻🇪",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-102.0, 15.2] },
+        "properties": {
+          "name": "Guatemala",
+          "emoji": "🇬🇹",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-80.7821, 8.5379] },
+        "properties": {
+          "name": "Panama",
+          "emoji": "🇵🇦",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-88.8965, 13.7942] },
+        "properties": {
+          "name": "El Salvador",
+          "emoji": "🇸🇻",
+          "languages": ["Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-66.1109, 18.2002] },
+        "properties": {
+          "name": "Puerto Rico (US)",
+          "emoji": "🇵🇷",
+          "languages": ["English", "Spanish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-9.4295, 7.5399] },
+        "properties": {
+          "name": "Liberia",
+          "emoji": "🇱🇷",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-17.6078, 14.4974] },
+        "properties": {
+          "name": "Senegal",
+          "emoji": "🇸🇳",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-1.5616, 12.2383] },
+        "properties": {
+          "name": "Burkina Faso",
+          "emoji": "🇧🇫",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [10.2679, 5.9604] },
+        "properties": {
+          "name": "Cameroon",
+          "emoji": "🇨🇲",
+          "languages": ["French", "English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-3.9962, 7.5399] },
+        "properties": {
+          "name": "Côte d'Ivoire",
+          "emoji": "🇨🇮",
+          "languages": ["French"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-72.2852, 18.9712] },
+        "properties": {
+          "name": "Haiti",
+          "emoji": "🇭🇹",
+          "languages": ["French", "Haitian Creole"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [113.9213, -0.7893] },
+        "properties": {
+          "name": "Indonesia",
+          "emoji": "🇮🇩",
+          "languages": ["Indonesian"] 
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [78.9629, 20.5937] },
+        "properties": {
+          "name": "India",
+          "emoji": "🇮🇳",
+          "languages": ["English", "Hindi", "..."]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-95.7129, 37.0902] },
+        "properties": {
+          "name": "United States",
+          "emoji": "🇺🇸",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-8.0, 53.0] },
+        "properties": {
+          "name": "Ireland",
+          "emoji": "🇮🇪",
+          "languages": ["English", "Irish"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [174.8859, -40.9006] },
+        "properties": {
+          "name": "New Zealand",
+          "emoji": "🇳🇿",
+          "languages": ["English", "Māori", "NZSL"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-61.3710, 10.6918] },
+        "properties": {
+          "name": "Trinidad and Tobago",
+          "emoji": "🇹🇹",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [-77.2975, 18.1096] },
+        "properties": {
+          "name": "Jamaica",
+          "emoji": "🇯🇲",
+          "languages": ["English", "Jamaican Patois"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [31.1656, -17.8252] },
+        "properties": {
+          "name": "Zimbabwe",
+          "emoji": "🇿🇼",
+          "languages": ["English", "Shona", "Ndebele", "..."]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [22.9375, -30.5595] },
+        "properties": {
+          "name": "South Africa",
+          "emoji": "🇿🇦",
+          "languages": ["English", "Zulu", "Xhosa", "Afrikaans", "..."]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [8.6753, 9.0820] },
+        "properties": {
+          "name": "Nigeria",
+          "emoji": "🇳🇬",
+          "languages": ["English"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [73.0, 33.7] },
+        "properties": {
+          "name": "Pakistan",
+          "emoji": "🇵🇰",
+          "languages": ["English", "Urdu"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": { "type": "Point", "coordinates": [122.0, 13.0] },
+        "properties": {
+          "name": "Philippines",
+          "emoji": "🇵🇭",
+          "languages": ["English", "Filipino"]
+        }
+      }
+    ]
+  }
+  

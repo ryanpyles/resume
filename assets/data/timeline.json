@@ -1,0 +1,56 @@
+[
+  {
+    "year": "2006",
+    "title": "Graduated High School",
+    "description": "Completed high school at BVW, ready to explore the world.",
+    "icon": "assets/images/bvw.svg"
+  },
+  {
+    "year": "2006",
+    "title": "Started at KU",
+    "description": "Studied Portuguese, Mandarin, German, and French at the University of Kansas.",
+    "icon": "assets/images/ku.svg"
+  },
+  {
+    "year": "2008",
+    "title": "Joined Navy",
+    "description": "Enlisted in the United States Navy, serving as a corpsman.",
+    "icon": "assets/images/navy.svg"
+  },
+  {
+    "year": "2008",
+    "title": "Stationed in Okinawa",
+    "description": "Stationed in Okinawa, Japan, gaining invaluable experience abroad.",
+    "icon": "assets/images/okinawa.svg"
+  },
+  {
+    "year": "2011",
+    "title": "Returned to Civilian Life",
+    "description": "Transitioned back to civilian life, ready to take on new challenges.",
+    "icon": "assets/images/civilian.svg"
+  },
+  {
+    "year": "2018",
+    "title": "Wyncode - Miami",
+    "description": "Started the tech journey with Wyncode's Ruby on Rails program.",
+    "icon": "assets/images/wyncode.svg"
+  },
+  {
+    "year": "2022",
+    "title": "Digital Film Academy",
+    "description": "Enrolled in Code Immersive MERN Stack program at the Digital Film Academy.",
+    "icon": "assets/images/dfa.svg"
+  },
+  {
+    "year": "2023",
+    "title": "StackFX Creative",
+    "description": "Founded StackFX Creative, focusing on branding and web development.",
+    "icon": "assets/images/stackfx.svg"
+  },
+  {
+    "year": "2025",
+    "title": "Gideon's Inferno",
+    "description": "Published a full-length novel blending dark humor with speculative fiction. Began writing a memoir exploring resilience, identity, and transformation.",
+    "icon": "assets/images/gideons-inferno.svg"
+  }
+]

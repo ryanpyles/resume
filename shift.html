@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shift Happens - A Psychological Thriller by Ryan Pyles">
+  <title>Shift Happens</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.from('.shift-hero h1', { opacity: 0, y: -50, duration: 1 });
+      gsap.from('.shift-hero p', { opacity: 0, y: 30, duration: 1, delay: 0.3 });
+      gsap.from('.shift-content', {
+        scrollTrigger: {
+          trigger: '.shift-content',
+          start: 'top 80%',
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: 'power2.out'
+      });
+    });
+  </script>
+</head>
+<body>
+  <section class="panel hero-panel shift-hero" style="background: url('assets/images/shift-cover.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h1>Shift Happens</h1>
+      <p class="hero-subtitle">A psychological thriller where reality fractures at 6:17 PM.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-content shift-content">
+      <h2 class="section-title">About the Book</h2>
+      <p class="section-content">
+        Jack, Oren, and Damon each take a detour at exactly 6:17 PM—plunging them into a warped version of reality where time distorts, identities double, and death may already have happened. <em>Shift Happens</em> is a layered psychological thriller told from multiple fractured perspectives.
+      </p>
+    </div>
+  </section>
+
+  <footer class="portfolio-footer">
+    &copy; 2025 Ryan Pyles. All Rights Reserved.
+  </footer>
+</body>
+</html>
